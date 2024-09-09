@@ -52,8 +52,3 @@ p {
   grid-column: 3 / span 1;
   grid-row: 2 / span 1;
 }
-
-/* Referenced https://stackoverflow.com/questions/19138758/how-to-align-caption-underneath-image */
-.caption {
-  text-align: center;
-}
