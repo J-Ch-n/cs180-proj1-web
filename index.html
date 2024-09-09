@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>CS180 Project 1 - Images of the Russian Empire:
+      Colorizing the Prokudin-Gorskii Photo Collection</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1> CS180 Project 1 - Color Reconstruction</h1>
+    <h1> CS180 Project 1 - Images of the Russian Empire:
+      Colorizing the Prokudin-Gorskii Photo Collection</h1>
     <h2> Algorithms </h2>
     
     <h3> Exhaustive Search</h3>
@@ -30,18 +32,52 @@
     
     <p> While the exhaustive search approach could easily handle low resolution images, it failed to process the high resolution (tif) files efficiently. Enters the image pyramid. Here, I implemented a recursive
       search from the lowest resolution all the way to the highest resolution (halfing the image dimensions each layer), updating the optimal shift while keeping the search window small. The recursive structures starts from the highest resolution. When the recursive 
-      calls hit a base case where the size is less than equal to 30 by 30 pixels, the function would find an optimal shift using the exhaustive search function outlined above. After the base layer returns the optimal shift, the layers 
-      above will recursively update the optimal shifts within a 30 by 30 window centered at the previous optimal shift. The reason why I used a 30 by 30 window throughout was because I needed to exhaustively search the base case image. Otherwise, 
-      the algorithm may not be able to find the optimal shift in the image with the lowest quality. After the recursive stack finishes, the returned value would be the optimal shift for the original image.
+      calls hit a base case where the size is less than equal to 10 by 10 pixels, the function would find an optimal shift using the exhaustive search function outlined above. After the base layer returns the optimal shift, the layers 
+      above will recursively update the optimal shifts within a 10 by 10 window centered at the previous optimal shift. The reason why I used a 10 by 10 window throughout was because I needed to exhaustively search the base case image. Otherwise, 
+      the algorithm may not be able to find the optimal shift in the image with the lowest quality. After the recursive stack finishes, the returned value would be the optimal shift for the original image. I originally tried to use 30 by 30 as the smallest window size 
+      each time, but my program was too slow, so I changed to the current configuration.
     </p>
     <hr />
     
+    <!-- https://www.tutorialspoint.com/how-to-set-caption-for-an-image-using-html#:~:text=HTML%20allows%20setting%20a%20caption,to%20define%20the%20caption%20text. -->
     <h2> Select Images</h2>
-    <img src="./out_path/cathedral.jpg", width="500">
-    <img src="./out_path/monastery.jpg", width="500">
-    <img src="./out_path/tobolsk.jpg", width="500">
-    <img src="./out_path/train.jpg", width="500">
-    <img src="./out_path/sculpture.jpg", width="500">
-    <img src="./out_path/emir.jpg", width="500">
+    <div class="image_container">
+      <div class="image_1 image">
+        <figure> 
+          <img src="./out_path/cathedral.jpg", width="300">
+          <figcaption class="caption"> Cathedral </figcaption>
+        </figure>
+      </div>
+      <div class="image_2 image">
+        <figure> 
+          <img src="./out_path/monastery.jpg", width="300">
+          <figcaption class="caption"> Monastery </figcaption>
+        </figure>
+      </div>
+      <div class="image_3 image">
+        <figure> 
+          <img src="./out_path/tobolsk.jpg", width="300">
+          <figcaption class="caption"> Tobolsk </figcaption>
+        </figure>
+      </div>
+      <div class="image_4 image">
+        <figure> 
+          <img src="./out_path/harvesters.jpg", width="300">
+          <figcaption class="caption"> Harvesters </figcaption>
+        </figure>
+      </div>
+      <div class="image_5 image">
+        <figure> 
+          <img src="./out_path/sculpture.jpg", width="300">
+          <figcaption class="caption"> Sculpture </figcaption>
+        </figure>
+      </div>
+      <div class="image_6 image">
+        <figure> 
+          <img src="./out_path/three_generations.jpg", width="300">
+          <figcaption class="caption"> Three Generations </figcaption>
+        </figure>
+      </div>
+    </div>
   </body>
 </html>
