@@ -24,7 +24,7 @@
       enough to successfully align the layers, so I tried to preprocess each image layer. Since NCC performed slightly better than euclidean distance, I used 
       NCC for all images. At first, I only add a sobel edge detector to allow my algorithm to only focus on the macro-features and not 
       color and lighting differences. However, this only improved the alignment by a small margin. After observing the preprocessed images, I discovered that each layer had uneven edges that 
-      can dominate and mislead my algorithm. Thus, I cropped each layer 10% of the image height/width in each direction from each side. This update finally properly aligned the image pairs. Using this 
+      can dominate and mislead my algorithm. Thus, I cropped each layer 20% of the image height/width in each direction from each side. This update finally properly aligned the image pairs. Using this 
       finalized algorithm, I was able to stack the aligned layers together to produce a visually pleasing colored image.
     </p>
     
