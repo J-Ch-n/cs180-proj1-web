@@ -1,2 +1,2 @@
-Webpage report URL: https://j-ch-n.github.io/cs180-proj1-web/
-GitHub repo URL: https://github.com/J-Ch-n/cs180-proj1
+https://j-ch-n.github.io/proj1/
+https://github.com/J-Ch-n/cs180-proj1
