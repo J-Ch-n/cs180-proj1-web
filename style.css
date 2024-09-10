@@ -4,18 +4,16 @@ html {
 
 p {
   font-family:'Georgia';
+  text-align: left;
 }
 
-/* Referenced https://css-tricks.com/snippets/css/complete-guide-grid/ */
+/* Referenced https://css-tricks.com/snippets/css/complete-guide-grid/ and
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout*/
 .image_container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 15px 10px;
-  background-color: aliceblue;
-}
-
-.image {
   background-color: aliceblue;
 }
 
@@ -47,4 +45,53 @@ p {
 .image_6 {
   grid-column: 3 / span 1;
   grid-row: 2 / span 1;
+}
+
+.image {
+  background-color: aliceblue;
+  align-self: center;
+  justify-self: center;
+}
+
+.special {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr;
+  background-color: aliceblue;
+}
+
+.self_chosen {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr;
+  background-color: aliceblue;
+}
+
+.sp_image_1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.sp_image_2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.sf_image_1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.sf_image_2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.sf_image_3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.caption {
+  text-align: center;
 }
